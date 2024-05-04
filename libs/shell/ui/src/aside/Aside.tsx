@@ -9,7 +9,7 @@ export const Aside = () => {
       aria-label="Sidebar"
     >
 
-      <div className="h-full px-3 py-4 overflow-y-auto bg-gray-800 dark:bg-gray-800">
+      <div className="h-full px-3 py-4 overflow-y-auto bg-gray dark:bg-gray-800">
       <h2 className="text-white text-2xl py-4 font-bold">Home</h2>
         <ul className="space-y-2 font-medium">
           <li>
