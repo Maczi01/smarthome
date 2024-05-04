@@ -60,5 +60,8 @@
       "inputs": ["production", "^production"]
     }
   },
-  "neverConnectToCloud": true
+  "neverConnectToCloud": true,
+  "tasksRunnerOptions": {
+    "default": {}
+    }
 }
