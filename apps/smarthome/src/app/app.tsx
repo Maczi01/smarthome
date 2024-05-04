@@ -1,4 +1,4 @@
-import Shell from '../../../../libs/shell/feature/src/lib/shell';
+import { Shell } from "@smarthome/shell/feature";
 
 export function App() {
   return <Shell />;
