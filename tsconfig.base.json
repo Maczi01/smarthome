@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@smarthome/feature": ["libs/home/feature/src/index.ts"],
+      "@smarthome/home/feature": ["libs/home/feature/src/index.ts"],
+      "@smarthome/profile/feature": ["libs/profile/feature/src/index.ts"],
+      "@smarthome/shell/feature": ["libs/shell/feature/src/index.ts"],
+      "@smarthome/shell/ui": ["libs/shell/ui/src/index.ts"],
+      "@smarthome/ui": ["libs/shared/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

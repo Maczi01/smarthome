@@ -1,0 +1,19 @@
+{
+  "name": "shell-feature",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/shell/feature/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shell/feature",
+        "main": "libs/shell/feature/src/index.ts",
+        "tsConfig": "libs/shell/feature/tsconfig.lib.json",
+        "assets": ["libs/shell/feature/*.md"]
+      }
+    }
+  }
+}

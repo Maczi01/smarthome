@@ -1,0 +1,19 @@
+{
+  "name": "profile-feature",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/profile/feature/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/profile/feature",
+        "main": "libs/profile/feature/src/index.ts",
+        "tsConfig": "libs/profile/feature/tsconfig.lib.json",
+        "assets": ["libs/profile/feature/*.md"]
+      }
+    }
+  }
+}
