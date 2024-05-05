@@ -9,13 +9,13 @@ on:
       - main
 
 jobs:
-  lint-and-test:
-    name: Lint and Test
+  lint-and-deploy:
+    name: Lint and Deploy
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [ 20 ]
+        node-version: [20]
 
     steps:
       - name: Check out the code
@@ -30,9 +30,10 @@ jobs:
         run: npm install
 
       - name: Run linting
-        run: npm run lint
+        run: npm run lintk
 
       - name: Deploy to Vercel
+        if: success()  # Ensure it only runs if the previous steps were successful
         uses: vercel/action@v2
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
