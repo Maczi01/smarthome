@@ -30,12 +30,13 @@ jobs:
         run: npm install
 
       - name: Run linting
-        run: npm run lintk
+        run: npm run lint
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
 
       - name: Deploy to Vercel
-        if: success()  # Ensure it only runs if the previous steps were successful
-        uses: vercel/action@v2
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_SMARTHOME_ID }}
+        if: success()  # Ensure it only runs if linting is successful
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod --token $VERCEL_TOKEN
