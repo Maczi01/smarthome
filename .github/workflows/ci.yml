@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20]
+        node-version: [ 20 ]
 
     steps:
       - name: Check out the code
@@ -31,3 +31,10 @@ jobs:
 
       - name: Run linting
         run: npm run lint
+
+      - name: Deploy to Vercel
+        uses: vercel/action@v2
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_SMARTHOME_ID }}
