@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "lint": "nx run-many --target=lint --all"
+    "lint": "nx run-many --target=lint --all",
+    "commitlint": "commitlint",
+    "prepare": "husky"
   },
   "private": true,
   "dependencies": {
@@ -13,6 +15,8 @@
     "react-router-dom": "^6.23.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@nx/cypress": "18.3.3",
     "@nx/devkit": "18.3.3",
     "@nx/eslint": "18.3.3",
@@ -46,6 +50,7 @@
     "eslint-plugin-playwright": "^0.15.3",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^9.0.11",
     "jsdom": "~22.1.0",
     "nx": "18.3.3",
     "postcss": "8.4.31",
